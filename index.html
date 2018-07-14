@@ -1,0 +1,37 @@
+<!DOCTYYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="weather.css">
+	<script type="text/javascript" src="weather.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center">Weather App</h1>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-4"></div>
+        <div class="col-xs-10 col-sm-10 col-md-4 row con">
+          <div class="col-12 city">
+            <p class="text-center" id="city"></p>
+			<p class="text-center" id="date"></p>
+          </div>
+          <div class="col-6 temp">
+            <p class="text-center" id="temp"></p>
+            <p class="toggle">click to toggle &#8594;</p>
+          </div>
+          <div class="col-6 info">
+            <p class="text-center" id="skys"></p>
+            <p class="text-center" id="wind"></p>
+            <p class="text-center" id="humidity"></p>
+          </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-4"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
