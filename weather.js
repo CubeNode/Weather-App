@@ -1,6 +1,6 @@
 
 /***** CANVAS *****/
-const c = document.getElementById('canvas');
+/*const c = document.getElementById('canvas');
 const ctx = c.getContext('2d');
 
 c.width = window.innerWidth;
@@ -177,7 +177,7 @@ function animate() {
 }
 
 init();
-animate();
+animate();*/
 
 
 var interval = setInterval(function(){
@@ -189,7 +189,7 @@ function setDate() {
   this.d = new Date();
   this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   this.minute = this.d.getMinutes() < 10 ? "0" + this.d.getMinutes() : this.d.getMinutes();
-  this.hour = this.d.getHours() > 12 ? this.d.getHours() - 12 : this.d.getHours();
+  this.hour = this.d.getHours() > 12 ? this.d.getHours() - 12 : this.d.getHours() == 0 ? 12 : this.d.getHours();
   this.meridiem = this.d.getHours() < 12 ? "AM" : "PM";
   this.update = () => {
     $("#date").html(this.months[this.d.getMonth()] + " " + this.d.getDate() + ", " + this.d.getFullYear() + " " + this.hour + ":" + this.minute + this.meridiem);
@@ -204,8 +204,8 @@ var getWeather = function(position) {
 	var d = new Date();
 
   $.getJSON("https://fcc-weather-api.glitch.me/api/current?" + lat + "&" + lon, function(json){
-    if(json.weather[0].main !== "Rain") {
-      /***** TIME OF DAY *****/
+    /*if(json.weather[0].main !== "Rain") {
+
       if(d.getMonth() > 2 && d.getMonth() < 10) {
 				if(d.getHours() > 5 && d.getHours() < 20) {
           timeOfDay = 1;
@@ -226,7 +226,7 @@ var getWeather = function(position) {
     } else {
       timeOfDay = 3;
       curBG = rainBG;
-		}
+		}*/
 
     /***** LOCAL WEATHER *****/
     $("#city").html(json.name + ", " + json.sys.country);
