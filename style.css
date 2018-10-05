@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  position: absolute;
+  height: 100vh;
+  z-index: -1;
+}
+
+h1, h2, p {
+  color: #FFF;
+  font-family: Verdana;
+  font-weight: 600;
+  text-align: center;
+}
+
+#city {
+  color: #FFF;
+  font-size: 8vw;
+  padding-top: 15vh;
+}
+
+#date {
+  color: #FFF;
+}
+
+#temp {
+  font-size: 8vw;
+  margin-top: 12vh;
+  margin-left: 6vw;
+}
+
+.temp p {
+  font-size: 4vw;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  font-size: 3vw;
+  font-weight: 0;
+  width: 100%;
+  margin-top: 12vh;
+}
+
+.info p {
+  font-weight: 0;
+  width: 33vw;
+}
+
+.stat {
+  font-size: 2vw;
+}

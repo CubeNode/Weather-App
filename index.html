@@ -1,37 +1,40 @@
-<!DOCTYYPE html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="weather.css">
-	<script type="text/javascript" src="weather.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Local Weather</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <h1 class="text-center">Weather App</h1>
+    <canvas id="canvas" width="100vw" height="100vh">Your browser does not support the HTML5 canvas tag.</canvas>
+    <div id="container">
+      <div class="city">
+        <h1 id="city"></h1>
+      </div>
+      <div class="date">
+        <h2 id="date"></h2>
+      </div>
+      <div class="temp">
+        <h2 id="temp"></h2>
+        <p id="skys"></p>
+      </div>
+      <div class="info">
+        <div>
+          <p>Max/Min</p>
+          <p class="stat" id="max-min"></p>
         </div>
-        <div class="col-xs-1 col-sm-1 col-md-4"></div>
-        <div class="col-xs-10 col-sm-10 col-md-4 row con">
-          <div class="col-12 city">
-            <p class="text-center" id="city"></p>
-			<p class="text-center" id="date"></p>
-          </div>
-          <div class="col-6 temp">
-            <p class="text-center" id="temp"></p>
-            <p class="toggle">click to toggle &#8594;</p>
-          </div>
-          <div class="col-6 info">
-            <p class="text-center" id="skys"></p>
-            <p class="text-center" id="wind"></p>
-            <p class="text-center" id="humidity"></p>
-          </div>
+        <div>
+          <p>Wind</p>
+          <p class="stat" id="wind"></p>
         </div>
-        <div class="col-xs-1 col-sm-1 col-4"></div>
+        <div>
+          <p>Humidity</p>
+          <p class="stat" id="humidity"></p>
+        </div>
       </div>
     </div>
-
+    <script type="text/javascript" src="weather.js"></script>
   </body>
 </html>
