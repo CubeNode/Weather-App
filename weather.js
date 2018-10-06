@@ -15,6 +15,15 @@ function setDate() {
   }
 }
 
+function getRandomColor() {
+  var letters = '3456789ABCDE';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 12)];
+  }
+  return color;
+}
+
 /***** GET WEATHER *****/
 var getWeather = function(position) {
   var lat = "lat=" + position.coords.latitude;
@@ -44,7 +53,7 @@ var getWeather = function(position) {
             $('#max-min').html(Math.floor(json.main.temp_max * 9/5 + 32) + "°/" + Math.floor(json.main.temp_min * 9/5 + 32) + "°");
 
         }
-
+        $("body").css('background-color', getRandomColor());
         $('.toggle').hide();
       });
 
