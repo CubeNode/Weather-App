@@ -37,7 +37,7 @@ var getWeather = function(position) {
 
     $("#temp").html(Math.floor(json.main.temp * 9/5 + 32) + "°" + tempUnit);
     $('#max-min').html(Math.floor(json.main.temp_max * 9/5 + 32) + "°/" + Math.floor(json.main.temp_min * 9/5 + 32) + "°");
-      $(".temp").on("click", function(){
+      $("body").on("click", function(){
          if(tempUnit == "F") {
            var newTemp = Math.floor(json.main.temp);
            var highTemp = Math.floor(json.main.temp_max);
